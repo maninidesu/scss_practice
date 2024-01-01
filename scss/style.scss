@@ -1,0 +1,118 @@
+@use 'common';
+
+$sm: 640px;
+$md: 768px;
+$lg: 1080px;
+$xl: 1280px;
+@mixin mq($bp){
+    @media (min-width: ($bp)) {
+        @content;
+    }
+}
+/* 部品
+------------------------------------------ */
+/* フォントウェイト */
+.medium {
+    font-weight: 500;
+}
+.bold {
+    font-weight: 700;
+}
+/* フォントファミリー */
+/* 大文字 */
+.uppercase {
+    text-transform: uppercase;
+}
+/* セクション */
+.scss02 {
+    padding: 2rem 0 2rem;
+}
+
+/* コンテナ */
+.container {
+    width: 85%;
+    margin: auto;
+
+    @include mq($md) {
+        max-width: 65rem;
+    }
+}
+/* セクションタイトル */
+.section-title {
+    width: fit-content;
+    font-size: 2rem;
+    margin: 0 auto 1.5rem;
+    padding-bottom: .2rem;
+    border-bottom: .25rem solid rgb(255, 0, 255);
+    @include mq($md){
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+}
+/* ヘッダー
+---------------------------------------------------------- */
+/* メイン
+---------------------------------------------------------- */
+/* scss01
+---------------------------------------------------------- */
+$bgBlack: #000;
+$white: #fff;
+.scss01 {
+    background-color: rgb(210, 255, 240);
+}
+.scss01-nav {
+    margin-bottom: 2rem;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: $bgBlack;
+
+        &__item {
+            margin: 1rem;
+            font-weight: bold;
+            color: $white;
+
+            &:not(:first-child)::before {
+                content: '/';
+                margin-right: 1rem;
+            }
+            
+            & a {
+                color: $white;
+            }
+        }
+    }
+}
+.scss01-btn-wrap {
+    padding: 1rem;
+}
+@mixin button($width: 11rem, $bgColor: #333) { // 引数はなくてもいい
+    display: inline-block;
+    width: $width;
+    height:2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: $bgColor;
+    border-radius: .3rem;
+}
+.button-sm {
+    @include button(8rem, red);
+}
+.button-lg {
+    @include button(16rem, blue)
+}
+.button {
+    @include button;
+}
+/* scss02
+---------------------------------------------------------- */
+/* フッター
+---------------------------------------------------------- */
+
+
+/*
+------------------------------------------ */
+/*  */
+@media (max-width: 767px) {}
+@media (min-width: 768px) {}

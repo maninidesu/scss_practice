@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* ベースのスタイル
+------------------------------------------ */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    color: #333;
+}
+p {
+    line-height: 1.75;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
