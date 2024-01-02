@@ -24,7 +24,7 @@ $xl: 1280px;
     text-transform: uppercase;
 }
 /* セクション */
-.scss02, .javascript, .table-practice, .contact {
+.javascript, .tricks, .table-practice, .contact {
     padding: 2rem 0 2rem;
 }
 
@@ -123,7 +123,7 @@ $white: #fff;
 }
 .javascript {
 
-    .container > div {
+    .container > div:not(.js04) {
         padding: 1rem;
         margin-bottom: 1rem;
         background-color: azure;
@@ -242,12 +242,169 @@ $white: #fff;
     transition: background-color .3s, color .3s, box-shadow .3s;
 }
 .js04Btn-clicked {
+    font-size: 0;
     color: #fff;
     background-color: rgb(179, 0, 179);
     box-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .3);
 }
-/*
+.js04Btn-clicked::before {
+    content: '押したよ！';
+    font-size: .8rem;
+}
+/* tricks
 ------------------------------------------ */
+.marker-pink {
+    background: linear-gradient(transparent 50%, rgb(255, 28, 153) 50%);
+}
+.marker-yellow {
+    background: linear-gradient(transparent 50%, yellow 50%);
+}
+.tricks {
+    background-color: rgb(210, 255, 240);
+    
+    .container > div:not(:last-child) {
+        margin-bottom: 2.5rem;
+    }
+    .tricks01 {
+        h3 {
+            font-size: 1.1rem;
+            margin-bottom: .5rem;
+        }
+        ul {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: rgb(255, 92, 33);
+
+            li {
+                text-indent: -1em;
+                padding-left: 1em;
+            }
+            li:not(:last-child) {
+                margin-bottom: .5rem;
+            }
+        }
+        div {
+            line-height: 1.2;
+        }
+    }
+    .tricks02 {
+        h3 {
+            margin-bottom: 1rem;
+            padding: .5rem;
+            text-align: center;
+            font-size: 1.25rem;
+            color: #fff;
+            background-color: rgb(255, 176, 30);
+        }
+        ul {
+            li:not(:last-child) {
+                margin-bottom: .75rem;
+            }
+            h4 {
+                margin-bottom: .3rem;
+            }
+            h4::before {
+                content: "Point1";
+                display: block;
+                width: 4.5rem;
+                height: 1.5rem;
+                line-height: 1.5rem;
+                margin-bottom: .3rem;
+                text-align: center;
+                color: #fff;
+                background-color: rgb(255, 221, 0);
+                border-radius: .25rem;
+            }
+            li:nth-child(2) h4::before {
+                content: "Point2";
+            }
+            li:nth-child(3) h4::before {
+                content: "Point3";
+            }
+            p {
+                font-size: .75rem;
+                line-height: 1.2;
+            }
+        }
+    }
+}
+/* tiricks03 */
+.tricks03 {
+    h3 {
+        margin-bottom: 1rem;
+        padding-left: .5rem;
+        font-size: 1.3rem;
+        border-left: .3rem solid greenyellow;
+    }
+    .tricks03-box {
+        span, button {
+            vertical-align: middle;
+            margin: 1rem .5rem;
+        }
+    }
+}
+.tricks03-circle {
+    position: relative;
+    display: inline-block;
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    font-size: .85rem;
+    font-weight: 700;
+    text-align: center;
+    color: #f9b538;
+    background-color: rgb(0, 211, 0);
+    border-radius: 50%;
+}
+.tricks03-circle:hover {
+    color: rgb(0, 211, 0);
+    background-color: #f9b538;
+}
+.tricks03-btn {
+    position: relative;
+    display: inline-block;
+    width: 10rem;
+    height: 1.5rem;
+    line-height: 1;
+    text-align: center;
+    font-size: .6rem;
+    color: #fff;
+    background: linear-gradient(90deg, #ffdd00 0%, #ffb01e 50%, orange 100%);
+    border-radius: 0.2rem;
+    transition: box-shadow .3s;
+}
+.tricks03-btn::after {
+    content: "";
+    position: absolute;
+    right: 1.2rem;
+    top: calc(50% - .165rem);
+    display: inline-block;
+    width: .38rem;
+    height: .38rem;
+    border-top: .085rem solid #fff;
+    border-right: .085rem solid #fff;
+    transform: rotate(45deg);
+    transition: right .3s;
+}
+.tricks03-btn:hover {
+    box-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .2);
+}
+.tricks03-btn:hover::after {
+    right: 1rem;
+}
+span.tricks03-triangle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 2rem 3.5rem 2rem;
+    border-color: transparent transparent rgb(255, 0, 0) transparent;
+    transition: transform 1s, border-color .3s;
+}
+.tricks03-triangle:hover {
+    border-color: transparent transparent rgb(0, 239, 243) transparent;
+    transform: rotate(540deg);
+}
 /*
 ------------------------------------------ */
 /*

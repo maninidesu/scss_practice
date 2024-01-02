@@ -44,7 +44,7 @@ img {
 }
 
 /* セクション */
-.scss02, .javascript, .table-practice, .contact {
+.javascript, .tricks, .table-practice, .contact {
   padding: 2rem 0 2rem;
 }
 
@@ -149,7 +149,7 @@ img {
 
 /* javascript
 ------------------------------------------ */
-.javascript .container > div {
+.javascript .container > div:not(.js04) {
   padding: 1rem;
   margin-bottom: 1rem;
   background-color: azure;
@@ -279,13 +279,171 @@ img {
 }
 
 .js04Btn-clicked {
+  font-size: 0;
   color: #fff;
   background-color: rgb(179, 0, 179);
   box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
 }
 
-/*
+.js04Btn-clicked::before {
+  content: "押したよ！";
+  font-size: 0.8rem;
+}
+
+/* tricks
 ------------------------------------------ */
+.marker-pink {
+  background: linear-gradient(transparent 50%, rgb(255, 28, 153) 50%);
+}
+
+.marker-yellow {
+  background: linear-gradient(transparent 50%, yellow 50%);
+}
+
+.tricks {
+  background-color: rgb(210, 255, 240);
+}
+.tricks .container > div:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+.tricks .tricks01 h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.tricks .tricks01 ul {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: rgb(255, 92, 33);
+}
+.tricks .tricks01 ul li {
+  text-indent: -1em;
+  padding-left: 1em;
+}
+.tricks .tricks01 ul li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.tricks .tricks01 div {
+  line-height: 1.2;
+}
+.tricks .tricks02 h3 {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  color: #fff;
+  background-color: rgb(255, 176, 30);
+}
+.tricks .tricks02 ul li:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+.tricks .tricks02 ul h4 {
+  margin-bottom: 0.3rem;
+}
+.tricks .tricks02 ul h4::before {
+  content: "Point1";
+  display: block;
+  width: 4.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.3rem;
+  text-align: center;
+  color: #fff;
+  background-color: rgb(255, 221, 0);
+  border-radius: 0.25rem;
+}
+.tricks .tricks02 ul li:nth-child(2) h4::before {
+  content: "Point2";
+}
+.tricks .tricks02 ul li:nth-child(3) h4::before {
+  content: "Point3";
+}
+.tricks .tricks02 ul p {
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+/* tiricks03 */
+.tricks03 h3 {
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  font-size: 1.3rem;
+  border-left: 0.3rem solid greenyellow;
+}
+.tricks03 .tricks03-box span, .tricks03 .tricks03-box button {
+  vertical-align: middle;
+  margin: 1rem 0.5rem;
+}
+
+.tricks03-circle {
+  position: relative;
+  display: inline-block;
+  width: 3.5rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-align: center;
+  color: #f9b538;
+  background-color: rgb(0, 211, 0);
+  border-radius: 50%;
+}
+
+.tricks03-circle:hover {
+  color: rgb(0, 211, 0);
+  background-color: #f9b538;
+}
+
+.tricks03-btn {
+  position: relative;
+  display: inline-block;
+  width: 10rem;
+  height: 1.5rem;
+  line-height: 1;
+  text-align: center;
+  font-size: 0.6rem;
+  color: #fff;
+  background: linear-gradient(90deg, #ffdd00 0%, #ffb01e 50%, orange 100%);
+  border-radius: 0.2rem;
+  transition: box-shadow 0.3s;
+}
+
+.tricks03-btn::after {
+  content: "";
+  position: absolute;
+  right: 1.2rem;
+  top: calc(50% - 0.165rem);
+  display: inline-block;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-top: 0.085rem solid #fff;
+  border-right: 0.085rem solid #fff;
+  transform: rotate(45deg);
+  transition: right 0.3s;
+}
+
+.tricks03-btn:hover {
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+.tricks03-btn:hover::after {
+  right: 1rem;
+}
+
+span.tricks03-triangle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 2rem 3.5rem 2rem;
+  border-color: transparent transparent rgb(255, 0, 0) transparent;
+  transition: transform 1s, border-color 0.3s;
+}
+
+.tricks03-triangle:hover {
+  border-color: transparent transparent rgb(0, 239, 243) transparent;
+  transform: rotate(540deg);
+}
+
 /*
 ------------------------------------------ */
 /*
